@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARBILEX — Observatoire Empirique du Contentieux Post-Arbitral</title>
+  <meta name="description" content="Observatoire en ligne de données empiriques sur le contentieux post-arbitral. Collecte, codage et analyse systématique des décisions judiciaires relatives aux recours contre les sentences arbitrales.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">ARBILEX <span>Observatory</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="corpus.html">Corpus</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title">ARBILEX</h1>
+      <p class="hero-subtitle">Observatoire Empirique du Contentieux Post-Arbitral</p>
+      <p class="hero-description">
+        Un observatoire en ligne de données empiriques sur le contentieux post-arbitral.
+        Collecte, codage et analyse systématique des décisions judiciaires relatives aux
+        recours contre les sentences arbitrales aux États-Unis et en France.
+      </p>
+      <div class="banner">
+        <span class="banner-dot"></span>
+        Données en cours de collecte — Août 2026
+      </div>
+    </section>
+
+    <!-- Sections overview -->
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Le projet</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title">Question de recherche</h3>
+            <p class="card-text">
+              L'arrivée de l'IA générative a-t-elle modifié les pratiques argumentatives
+              dans le contentieux post-arbitral fédéral américain ? Analyse quantitative
+              sur trois périodes (2018–2026).
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Approche empirique</h3>
+            <p class="card-text">
+              Collecte exhaustive via les API de CourtListener (États-Unis) et Judilibre (France).
+              Codage systématique des variables structurelles de chaque décision. Analyse
+              statistique (ANOVA, chi-deux).
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Dimension comparatiste</h3>
+            <p class="card-text">
+              Volet américain : motions to vacate (Section 10 FAA). Volet français :
+              reconnaissance et exequatur des sentences arbitrales étrangères.
+              Perspective d'extension au Brésil (STJ).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key numbers -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Chiffres clés</h2>
+          <p class="section-subtitle">Statistiques du corpus (en cours de constitution)</p>
+          <div class="section-divider"></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">—</div>
+            <div class="stat-label">Décisions US</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">—</div>
+            <div class="stat-label">Décisions FR</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Années couvertes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">8+</div>
+            <div class="stat-label">Variables codées</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Sources de données</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title">CourtListener</h3>
+            <p class="card-text">
+              Base de données open-source du Free Law Project. Texte intégral des décisions
+              fédérales américaines. API v4 gratuite. Couverture : tous les circuits fédéraux.
+            </p>
+            <div class="tag-group">
+              <span class="tag">API REST</span>
+              <span class="tag">Open Source</span>
+              <span class="tag">Texte intégral</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Judilibre</h3>
+            <p class="card-text">
+              Base ouverte de la Cour de cassation française, accessible via le portail PISTE
+              du gouvernement. Décisions de la Cour de cassation et des cours d'appel.
+            </p>
+            <div class="tag-group">
+              <span class="tag">Portail PISTE</span>
+              <span class="tag">Cour de cassation</span>
+              <span class="tag">Open Data</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="methodologie.html">Méthodologie</a>
+      <a href="resultats.html">Résultats</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+    <p>Dorian Dion — 2026</p>
+    <p style="margin-top: 0.5rem; font-size: 0.75rem;">ARBILEX — Observatoire Empirique du Contentieux Post-Arbitral</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

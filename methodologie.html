@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Méthodologie — ARBILEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">ARBILEX <span>Observatory</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="corpus.html">Corpus</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      <!-- Research Question -->
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">Méthodologie</h1>
+          <p class="section-subtitle">Design de recherche et protocole de collecte</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h2 class="card-title">Question de recherche</h2>
+          <p class="card-text" style="font-size: 1.1rem; font-style: italic; color: var(--text-primary);">
+            « L'arrivée de l'IA générative a-t-elle modifié les pratiques argumentatives
+            dans le contentieux post-arbitral fédéral américain ? »
+          </p>
+          <p class="card-text" style="margin-top: 1rem;">
+            Cette question vise à mesurer quantitativement l'impact de l'intelligence artificielle
+            générative sur la structure des recours contre les sentences arbitrales devant les
+            juridictions fédérales américaines. L'hypothèse sous-jacente est que l'IA, en abaissant
+            le coût marginal de rédaction juridique, pourrait entraîner une inflation argumentative
+            mesurable : mémoires plus longs, davantage de motifs invoqués simultanément, et une
+            densité citationnelle accrue.
+          </p>
+        </div>
+      </section>
+
+      <!-- Temporal periods -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Périodes temporelles</h2>
+          <p class="section-subtitle">Division en trois phases pour isoler l'effet de l'IA générative</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-period">2018 – 2022</div>
+            <div class="timeline-title">Période pré-IA</div>
+            <p class="timeline-text">
+              Ligne de base antérieure à la diffusion des outils d'IA générative. Cette période
+              sert de référence pour mesurer les pratiques argumentatives « normales » dans le
+              contentieux post-arbitral fédéral.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-period">2023</div>
+            <div class="timeline-title">Période de transition</div>
+            <p class="timeline-text">
+              Année de lancement de ChatGPT (novembre 2022) et d'adoption initiale par les
+              cabinets d'avocats. Premiers cas documentés d'utilisation — et de mauvaise
+              utilisation — de l'IA dans le contentieux (affaire Mata v. Avianca).
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-period">2024 – 2026</div>
+            <div class="timeline-title">Période post-IA</div>
+            <p class="timeline-text">
+              Phase de maturité et d'intégration généralisée des outils d'IA dans la pratique
+              juridique. Multiplication des directives judiciaires sur l'utilisation de l'IA.
+              Période au cours de laquelle les effets structurels devraient être mesurables.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Variables -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Variables mesurées</h2>
+          <p class="section-subtitle">Volet américain — Section 10 du Federal Arbitration Act</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="mono">word_count</span></td>
+              <td>Continue</td>
+              <td>Nombre total de mots dans la décision</td>
+            </tr>
+            <tr>
+              <td><span class="mono">citation_count</span></td>
+              <td>Continue</td>
+              <td>Nombre de références jurisprudentielles citées</td>
+            </tr>
+            <tr>
+              <td><span class="mono">grounds_invoked</span></td>
+              <td>Catégorielle</td>
+              <td>Motifs de Section 10 FAA : §10(a)(1) corruption/fraude, §10(a)(2) partialité manifeste, §10(a)(3) faute procédurale, §10(a)(4) excès de pouvoir</td>
+            </tr>
+            <tr>
+              <td><span class="mono">outcome</span></td>
+              <td>Catégorielle</td>
+              <td>Résultat : granted, denied, partial</td>
+            </tr>
+            <tr>
+              <td><span class="mono">court_circuit</span></td>
+              <td>Catégorielle</td>
+              <td>Juridiction (district fédéral et circuit)</td>
+            </tr>
+            <tr>
+              <td><span class="mono">processing_days</span></td>
+              <td>Continue</td>
+              <td>Délai entre le dépôt du recours et la décision</td>
+            </tr>
+            <tr>
+              <td><span class="mono">ai_mention</span></td>
+              <td>Binaire</td>
+              <td>Mention explicite de l'intelligence artificielle dans la décision</td>
+            </tr>
+            <tr>
+              <td><span class="mono">lexical_diversity</span></td>
+              <td>Continue</td>
+              <td>Métriques de diversité lexicale (TTR, hapax legomena)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="section-header" style="margin-top: 3rem;">
+          <h2 class="section-title">Variables — Volet français</h2>
+          <p class="section-subtitle">Judilibre — Reconnaissance des sentences arbitrales étrangères</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="mono">numero_pourvoi</span></td>
+              <td>Identifiant</td>
+              <td>Numéro de pourvoi ou numéro RG</td>
+            </tr>
+            <tr>
+              <td><span class="mono">date_decision</span></td>
+              <td>Date</td>
+              <td>Date de la décision</td>
+            </tr>
+            <tr>
+              <td><span class="mono">juridiction</span></td>
+              <td>Catégorielle</td>
+              <td>Tribunal judiciaire de Paris, Cour d'appel de Paris, Cour de cassation</td>
+            </tr>
+            <tr>
+              <td><span class="mono">chambre</span></td>
+              <td>Catégorielle</td>
+              <td>Chambre compétente (1re chambre civile, etc.)</td>
+            </tr>
+            <tr>
+              <td><span class="mono">solution</span></td>
+              <td>Catégorielle</td>
+              <td>Rejet, cassation, irrecevabilité, renvoi</td>
+            </tr>
+            <tr>
+              <td><span class="mono">themes</span></td>
+              <td>Catégorielle</td>
+              <td>Exequatur, reconnaissance, régularité internationale, ordre public</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Comparative dimension -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Dimension comparatiste</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title">Volet français</h3>
+            <p class="card-text">
+              Reconnaissance et exequatur des sentences arbitrales étrangères en France.
+              Décisions de la Cour de cassation et de la Cour d'appel de Paris. Période
+              2015–2025. Ce volet permet de vérifier et étendre le corpus de la thèse du
+              Dr. Ricardo Loretti sur la reconnaissance des sentences arbitrales étrangères
+              au Brésil et en France.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Perspective brésilienne</h3>
+            <p class="card-text">
+              Extension future : intégration des données du Superior Tribunal de Justiça (STJ)
+              brésilien, juridiction compétente pour l'homologation des sentences arbitrales
+              étrangères au Brésil. Analyse trilatérale (États-Unis, France, Brésil) des
+              mécanismes de contrôle post-arbitral.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data sources -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Sources de données et outils</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="card">
+          <ul class="feature-list">
+            <li><strong>CourtListener API v4</strong> — Free Law Project, texte intégral des décisions fédérales américaines (open-source, gratuit)</li>
+            <li><strong>Judilibre API</strong> — Portail PISTE du gouvernement français, décisions de la Cour de cassation et cours d'appel</li>
+            <li><strong>Google Colab</strong> — Environnement d'exécution Python gratuit (collecte, codage, analyse)</li>
+            <li><strong>GitHub Pages</strong> — Hébergement gratuit du site observatoire</li>
+            <li><strong>Chart.js</strong> — Bibliothèque de visualisation interactive</li>
+            <li><strong>Tests statistiques</strong> — ANOVA (comparaison de moyennes), chi-deux (variables catégorielles)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="resultats.html">Résultats</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+    <p>Dorian Dion — 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résultats — ARBILEX</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">ARBILEX <span>Observatory</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="corpus.html">Corpus</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h1 class="section-title">Résultats</h1>
+          <p class="section-subtitle">Visualisations et analyses statistiques</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="banner" style="margin-top: 2rem;">
+          <span class="banner-dot"></span>
+          Les résultats seront publiés une fois l'analyse terminée
+        </div>
+      </section>
+
+      <!-- Évolution temporelle -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Évolution temporelle</h2>
+          <p class="section-subtitle">Tendances des variables clés sur la période 2018–2026</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="chart-container" id="chart-temporal-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x1F4C8;</div>
+            <p class="chart-placeholder-text">Graphique : Évolution de la longueur moyenne des décisions par année</p>
+            <canvas id="chart-temporal" style="display:none;"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-container" id="chart-citations-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x1F4CA;</div>
+            <p class="chart-placeholder-text">Graphique : Densité citationnelle moyenne par période (pré-IA / transition / post-IA)</p>
+            <canvas id="chart-citations" style="display:none;"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparaison par circuit -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Comparaison par circuit</h2>
+          <p class="section-subtitle">Distribution géographique des recours et disparités inter-circuits</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="chart-container" id="chart-circuits-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x1F5FA;</div>
+            <p class="chart-placeholder-text">Graphique : Nombre de motions to vacate par circuit fédéral</p>
+            <canvas id="chart-circuits" style="display:none;"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-container" id="chart-grounds-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x1F4CB;</div>
+            <p class="chart-placeholder-text">Graphique : Fréquence des motifs de Section 10 invoqués par circuit</p>
+            <canvas id="chart-grounds" style="display:none;"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Taux de succès -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Taux de succès</h2>
+          <p class="section-subtitle">Résultats des motions to vacate : granted, denied, partial</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cards-grid">
+          <div class="chart-container" id="chart-outcome-wrapper">
+            <div class="chart-placeholder">
+              <div class="chart-placeholder-icon">&#x1F4CD;</div>
+              <p class="chart-placeholder-text">Graphique : Répartition des résultats (toutes périodes)</p>
+              <canvas id="chart-outcome" style="display:none;"></canvas>
+            </div>
+          </div>
+          <div class="chart-container" id="chart-outcome-trend-wrapper">
+            <div class="chart-placeholder">
+              <div class="chart-placeholder-icon">&#x1F4C9;</div>
+              <p class="chart-placeholder-text">Graphique : Évolution du taux de succès par période</p>
+              <canvas id="chart-outcome-trend" style="display:none;"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Volet français -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Volet français</h2>
+          <p class="section-subtitle">Reconnaissance et exequatur des sentences arbitrales étrangères</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="chart-container" id="chart-france-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x2696;</div>
+            <p class="chart-placeholder-text">Graphique : Décisions d'exequatur par année et par solution (Cour de cassation + Cour d'appel de Paris)</p>
+            <canvas id="chart-france" style="display:none;"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-container" id="chart-france-themes-wrapper">
+          <div class="chart-placeholder">
+            <div class="chart-placeholder-icon">&#x1F3F7;</div>
+            <p class="chart-placeholder-text">Graphique : Répartition thématique des décisions françaises</p>
+            <canvas id="chart-france-themes" style="display:none;"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="methodologie.html">Méthodologie</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+    <p>Dorian Dion — 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
